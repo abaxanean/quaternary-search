@@ -1,8 +1,3 @@
-/*
- * Copyright 2020 MobileIron, Inc.
- * All rights reserved.
- */
-
 package com.bax.other;
 
 import java.util.Random;
