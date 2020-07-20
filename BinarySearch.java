@@ -20,7 +20,7 @@ public class BinarySearch {
         // Standard
         final long startStandard = System.nanoTime();
         IntStream.range(0, testRuns).forEach(i -> {
-                    final int key = array[RANDOM.nextInt(array.length)];
+                    final int key = array[RANDOM.nextInt(size)];
                     int index = standard_binary_search(array, key);
                 }
         );
@@ -29,7 +29,7 @@ public class BinarySearch {
         // Quaternary
         final long startQuaternary = System.nanoTime();
         IntStream.range(0, testRuns).forEach(i -> {
-                    final int key = array[RANDOM.nextInt(array.length)];
+                    final int key = array[RANDOM.nextInt(size)];
                     int index = boundless_quaternary_search(array, key);
                 }
         );
@@ -52,7 +52,7 @@ public class BinarySearch {
         return array;
     }
 
-    static int standard_binary_search(int[] array, int key) {
+    static int standard_binary_search(final int[] array, final int key) {
         int bot = 0;
         int i = array.length - 1;
         int mid;
@@ -70,7 +70,7 @@ public class BinarySearch {
         return -1;
     }
 
-    static int boundless_quaternary_search(int[] array, int key) {
+    static int boundless_quaternary_search(final int[] array, final int key) {
         if (key < array[0]) {
             return -1;
         }
